@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config>
+        <domain>rickandmortyapi.com</domain>
+        <pin-set>
+            <pin digest="SHA-256">4HQtdsbE14lqcEw5YHG4JVx5rHWfpCmS09cZ0yfVd4U=</pin>
+        </pin-set>
+    </domain-config>
+    <domain-config>
+        <domain>10.0.2.2</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" overridePins="false" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
